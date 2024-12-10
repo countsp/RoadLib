@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0" version="25.0.1">
   <diagram name="Page-1" id="YcZxQdP-sLEUCD2x7oEg">
-    <mxGraphModel dx="1184" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="837" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -42,6 +42,33 @@
         </mxCell>
         <mxCell id="7YXDTnWUT9KUjHaPm-hT-14" value="ipm_semantic分为停车线和非停车线，分别提出标记，再拼接，" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1120" y="1050" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7YXDTnWUT9KUjHaPm-hT-15" value="新建patches_temp，将当前帧所有patch放入，设置每一个patch的主类型" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="1130" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7YXDTnWUT9KUjHaPm-hT-16" value="计算patch的mean,cov,主方向，计算不确定性" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="1210" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7YXDTnWUT9KUjHaPm-hT-17" value="判断条状特征/solid/stop，旋转patch.points，拟合，有效性检查" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="1290" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7YXDTnWUT9KUjHaPm-hT-18" value="将实线和虚线的mean和direction加入方向场" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="1370" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7YXDTnWUT9KUjHaPm-hT-19" value="根据方向场，重新计算点云的边界框，计算不确定度矩阵，加入frame.pathes返回frame" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="1450" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7YXDTnWUT9KUjHaPm-hT-20" value="处理线段与边界点，将其转换到度量空间，放入b-point_metric" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="1530" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7YXDTnWUT9KUjHaPm-hT-21" value="添加frame信息到map中，全局坐标转换" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="1610" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7YXDTnWUT9KUjHaPm-hT-22" value="&lt;div&gt;mergePatches：&lt;/div&gt;&lt;div&gt;patch/guide:patch聚类融合，统一成为cluster，冻结patch，更新patches_new&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="1690" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7YXDTnWUT9KUjHaPm-hT-23" value="solid/stop:距离计算和聚类,合并为更大的单一线段（&lt;code&gt;line_est&lt;/code&gt;），生成&lt;code&gt;linked_frames，&lt;/code&gt;更新patches_new" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="1770" width="370" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
