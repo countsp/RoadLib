@@ -58,10 +58,10 @@
         <mxCell id="7YXDTnWUT9KUjHaPm-hT-19" value="根据方向场，重新计算点云的边界框，计算不确定度矩阵，加入frame.pathes返回frame" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1120" y="1450" width="370" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="7YXDTnWUT9KUjHaPm-hT-20" value="处理线段与边界点，将其转换到度量空间，放入b-point_metric" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="7YXDTnWUT9KUjHaPm-hT-20" value="generateMetricPatches&lt;br&gt;处理线段与边界点，将其转换到度量空间，放入b-point_metric" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="710" y="1530" width="370" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="7YXDTnWUT9KUjHaPm-hT-21" value="添加frame信息到map中，全局坐标转换" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="7YXDTnWUT9KUjHaPm-hT-21" value="添加frame信息到map中，地图坐标系下，进行全局坐标转换" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="710" y="1610" width="370" height="60" as="geometry" />
         </mxCell>
         <mxCell id="7YXDTnWUT9KUjHaPm-hT-22" value="&lt;div&gt;mergePatches：&lt;/div&gt;&lt;div&gt;patch/guide:patch聚类融合，统一成为cluster，冻结patch，更新patches_new&lt;/div&gt;&lt;div&gt;solid/stop:距离计算和聚类,合并为更大的单一线段（&lt;code&gt;line_est&lt;/code&gt;），生成&lt;code&gt;linked_frames，&lt;/code&gt;更新patches_new&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
