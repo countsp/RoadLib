@@ -64,8 +64,11 @@
         <mxCell id="7YXDTnWUT9KUjHaPm-hT-21" value="添加frame信息到map中，全局坐标转换" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="710" y="1610" width="370" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="7YXDTnWUT9KUjHaPm-hT-22" value="&lt;div&gt;mergePatches：&lt;/div&gt;&lt;div&gt;patch/guide:patch聚类融合，统一成为cluster，冻结patch，更新patches_new&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="710" y="1690" width="370" height="60" as="geometry" />
+        <mxCell id="7YXDTnWUT9KUjHaPm-hT-22" value="&lt;div&gt;mergePatches：&lt;/div&gt;&lt;div&gt;patch/guide:patch聚类融合，统一成为cluster，冻结patch，更新patches_new&lt;/div&gt;&lt;div&gt;solid/stop:距离计算和聚类,合并为更大的单一线段（&lt;code&gt;line_est&lt;/code&gt;），生成&lt;code&gt;linked_frames，&lt;/code&gt;更新patches_new&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="1690" width="370" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="7YXDTnWUT9KUjHaPm-hT-25" value="&lt;strong&gt;对于&lt;code&gt;DASHED&lt;/code&gt;和&lt;code&gt;GUIDE&lt;/code&gt;类型的&lt;code&gt;patch&lt;/code&gt;&lt;/strong&gt;:&lt;code&gt;linked_frames&lt;/code&gt;只是一个大小为1的向量，所有相关联的帧都会被放入该唯一的列表中。换句话说，这些&lt;code&gt;patch&lt;/code&gt;的所有关联帧都拼在一个簇（单个列表）中。" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="1850" width="370" height="60" as="geometry" />
         </mxCell>
         <mxCell id="7YXDTnWUT9KUjHaPm-hT-23" value="solid/stop:距离计算和聚类,合并为更大的单一线段（&lt;code&gt;line_est&lt;/code&gt;），生成&lt;code&gt;linked_frames，&lt;/code&gt;更新patches_new" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="710" y="1770" width="370" height="60" as="geometry" />
